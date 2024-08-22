@@ -14,7 +14,7 @@ class UsersDataTable extends DataTable
 {
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
-        return (new EloquentDataTable($query))->setRowId('id');
+        return (new EloquentDataTable($query))->setTotalRecords(0)->setRowId('id');
     }
 
     public function query(User $model): QueryBuilder
